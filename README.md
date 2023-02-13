@@ -14,4 +14,6 @@
 //Performancesparend
 //Korrektes Singleton
 //Namensgebung
+//Listener in eigene Klassen
+//Freizeilen -> wo sind sie erwünscht?
 

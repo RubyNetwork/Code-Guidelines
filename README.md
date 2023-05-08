@@ -1,18 +1,18 @@
 # RubyMC Code-Style Guideline
 
-Um für das Netzwerk einen möglichst einheitlichen und ausgereiften Code-Stil zu haben, 
-findest du hier einige Regeln dazu, was du tun solltest und was nicht!
+In order to have a code style that is as uniform and mature as possible for the network,
+here are some rules about what you should and shouldn't do!
 
-## » Formatierung
+## » Formatting
 
-Vermeide es, deine Klammern in mehrere Zeilen zu setzen (2 Leerzeichen)
+Avoid putting your brackets in multiple lines (2 spaces)
 
-### Benutzung von [1TBS](https://en.wikipedia.org/wiki/Indent_style#Variant:_1TBS):
-Du reduzierst so nicht nur die länge deines Codes (macht es besser lesbar, weniger Zeilen), 
-sondern vermeidest auch mögliche Fehler bei der Einrückung!
+### Usage of [1TBS](https://en.wikipedia.org/wiki/Indent_style#Variant:_1TBS):
+You not only reduce the length of your code (more readability, less lines), 
+but also avoid possible mistakes when indenting
 
 ```java
-// Nicht gut
+// BAD
 void mobbing(Niklas niklas) 
 { 
   for (Member member : members) {
@@ -20,7 +20,7 @@ void mobbing(Niklas niklas)
   }
 }
 
-// Gut!!
+// GOOD
 void mobbing(Niklas niklas) {
   for (Member member : members) {
     member.mob(niklas);
@@ -302,21 +302,22 @@ int reward = ((60 / time) * 100) + (kills * 2);
 int reward = ((TIME_LIMIT / time) * TIME_REWARD) + (kills * KILL_REWARD));
 ```
 
-<h2>» Generelle Code-Stil-Guidelines</h2>
-<h3>• Unnötige Imports</h3>
-<p>Imports, die nicht zwangsläufig notwendig sind, sollten vermieden werden. Das macht die Klasse sauberer und einfacher zu lesen<p>
-<h3>• Das Stichwort "final"</h3>
-<p>Wenn möglich, sollten Klassen, Variablen und Attribute, die nicht weiter verändert werden sollen, immer als "final" deklariert werden. Das vermeidet einige Probleme und macht den Code auch besser strukturiert und verstehbar. Ein gutes Beispiel dafür ist z.B Parameter in Methoden, welche nicht inplace arbeiten.</p>
+<h2>» General Code-Style-Guidelines</h2>
+<h3>• Unnecessary imports</h3>
+<p>Imports that are not absolutely necessary should be avoided. This makes the class cleaner and easier to read<p>
+<h3>• Keyword "final"</h3>
+<p>If possible, classes, variables and attributes that are not to be changed any further should always be declared as "final". This avoids some problems and also makes the code better structured and understandable. A good example of this is e.g. parameters in methods that do not work in place.
+</p>
 <h3>• Java Conventions</h3>
 <p></p>
 
 //Never-Nesting
-//SOLID - Prinzip
-//Threadsicheres Arbeiten
-//Package-Struktur
-//Performancesparend
-//Korrektes Singleton
-//Namensgebung
-//Listener in eigene Klassen
-//Freizeilen -> wo sind sie erwünscht?
-//Leerzeichen (vor und nach Klammern) + Klammersetzung
+//[SOLID](https://en.wikipedia.org/wiki/SOLID) - Principle
+//Threadsafe!
+//Package-Structure
+//Performance saving (e.g. use ArrayList instead of LinkedList, except when needed)
+//Correct Singleton
+//Naming
+//Own classes for Listeners
+//Free lines -> where are they desired?
+//Spaces (before and after brackets)
